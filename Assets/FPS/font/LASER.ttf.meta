@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 5aaf363ad4c9af34b854c55f8af3f40a
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: LASER
+  fontNames:
+  - LASER
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 881a9c5bb061c8f41885f2e2f5ffb3ad, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
