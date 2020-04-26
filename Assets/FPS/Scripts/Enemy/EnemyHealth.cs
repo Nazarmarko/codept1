@@ -12,7 +12,7 @@ public class EnemyHealth : MonoBehaviour
     public void TakeDamage(float amount)
     {
         health -= amount;
-        //anim.SetTrigger("Hurt");
+       // anim.SetTrigger("Hurted");
         if (health <= 0f)
             Die();
     }
