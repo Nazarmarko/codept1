@@ -153,7 +153,7 @@ public class MovementScr : MonoBehaviour
     }
     void SpeedUp(float speed)
     {
-        Debug.Log(speed);
+       // Debug.Log(speed);
         currentSpeed = speed;
     }
     #endregion

@@ -156,6 +156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 200
+  particle: {fileID: 0}
 --- !u!54 &154398550
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -280,6 +281,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 200
+  particle: {fileID: 0}
 --- !u!54 &198151105
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -604,6 +606,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 200
+  particle: {fileID: 0}
 --- !u!1 &505591465
 GameObject:
   m_ObjectHideFlags: 0
@@ -638,6 +641,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 200
+  particle: {fileID: 0}
 --- !u!54 &505591467
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -762,6 +766,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 200
+  particle: {fileID: 0}
 --- !u!54 &529270140
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -976,6 +981,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 200
+  particle: {fileID: 0}
 --- !u!1 &831768588
 GameObject:
   m_ObjectHideFlags: 0
@@ -1010,6 +1016,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 200
+  particle: {fileID: 0}
 --- !u!54 &831768590
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1134,6 +1141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 200
+  particle: {fileID: 0}
 --- !u!54 &853336694
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1258,6 +1266,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 200
+  particle: {fileID: 0}
 --- !u!54 &906783780
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1564,6 +1573,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 200
+  particle: {fileID: 0}
 --- !u!1 &1162062775
 GameObject:
   m_ObjectHideFlags: 0
@@ -1636,7 +1646,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-21610
+  m_Name: pb_Mesh-9642
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2027,6 +2037,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1000
+  particle: {fileID: 0}
 --- !u!1 &1438223205
 GameObject:
   m_ObjectHideFlags: 0
@@ -2171,6 +2182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 200
+  particle: {fileID: 0}
 --- !u!54 &1477523268
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2385,6 +2397,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 200
+  particle: {fileID: 0}
 --- !u!1 &1505977211
 GameObject:
   m_ObjectHideFlags: 0
@@ -2419,6 +2432,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 200
+  particle: {fileID: 0}
 --- !u!54 &1505977213
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2743,6 +2757,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 200
+  particle: {fileID: 0}
 --- !u!1 &1626940807
 GameObject:
   m_ObjectHideFlags: 0
@@ -2867,13 +2882,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 200
+  particle: {fileID: 0}
 --- !u!43 &1676319351
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-21616
+  m_Name: pb_Mesh-9662
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3064,6 +3080,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 200
+  particle: {fileID: 0}
 --- !u!54 &1699108784
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3188,6 +3205,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 200
+  particle: {fileID: 0}
 --- !u!54 &1770924658
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3709,6 +3727,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5009944812061006326, guid: 1ab03e0fbf4988841a86d913d6a52df0,
+        type: 3}
+      propertyPath: particle
+      value: 
+      objectReference: {fileID: 5516289431126727462, guid: cb12ca640d0609a42b734d5e57c7bd49,
+        type: 3}
     - target: {fileID: 5009944812111581314, guid: 1ab03e0fbf4988841a86d913d6a52df0,
         type: 3}
       propertyPath: enemyBullet
