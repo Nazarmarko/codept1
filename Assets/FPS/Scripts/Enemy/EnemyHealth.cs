@@ -18,7 +18,6 @@ public class EnemyHealth : MonoBehaviour
     }
     private void Die()
     {
-        Debug.Log("dIE");
         Destroy(this.gameObject);
         GameObject particleObj = Instantiate(particle, transform.position, Quaternion.identity);
         Destroy(particleObj, 2f);

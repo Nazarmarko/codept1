@@ -20,28 +20,26 @@ public class EnemyBullet : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("FPPlayer").GetComponent<Transform>();
 
-        target = new Vector3(player.position.x, player.position.y,
-            player.position.z);
+        float randomValY = Random.Range(0f, 2f);
+        float randomValZ = Random.Range(0f, 2f);
+
+        target = player.position;
+
+        target += new Vector3(0, randomValY, randomValZ);
     }
     private void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, target, enemyBulletSpeed * Time.deltaTime);
+
+        transform.position = Vector3.MoveTowards(transform.position, target , enemyBulletSpeed * Time.deltaTime);
 
         liveTime -= Time.deltaTime;
         if (liveTime <= 0)
         {
-            DestroyObject(this.gameObject,0f);
+            GameObject currentExpo = Instantiate(expoEffect, transform.position, Quaternion.identity);
+            Destroy(this.gameObject,0f);
+            Destroy(currentExpo, 1f);
         }
-      if (transform.position == target)
-        {
-           GameObject currentExpo = Instantiate(expoEffect, transform.position, Quaternion.identity);
-            DestroyObject(this.gameObject,0f);
-            DestroyObject(currentExpo, 1f);
-        }
-    }
-    public void DestroyObject(GameObject destroyableObj,float timeForDestroy)
-    {
-        Destroy(destroyableObj, timeForDestroy);
+        
     }
     void OnCollisionEnter(Collision collision)
     {

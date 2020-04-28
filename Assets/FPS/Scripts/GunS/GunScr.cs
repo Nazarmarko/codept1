@@ -29,8 +29,8 @@ public class GunScr : MonoBehaviour
     [Range(0,150)]
     public int limitAmmo;
 
-
     public bool isGun;
+
     #endregion
     public static GunScr instance;
     public static GunScr Instance
@@ -44,10 +44,10 @@ public class GunScr : MonoBehaviour
     }
     private void Update()
     {
-        if (this.gameObject.transform.parent == null || (currentAmmo <= 0 && isGun))    
+        if (this.gameObject.transform.parent == null || currentAmmo < 0f)    
             return;
 
-        if (isGun)
+        if (tmpText != null)
         {
             tmpText.text = currentAmmo.ToString();
         }
@@ -55,7 +55,8 @@ public class GunScr : MonoBehaviour
         {
             tmpText.text = null;
         }
-     if(currentAmmo > limitAmmo)
+        
+     if(currentAmmo >= limitAmmo)
         {
             currentAmmo = limitAmmo;
         }
@@ -63,7 +64,10 @@ public class GunScr : MonoBehaviour
         if (Input.GetButton("Fire") && Time.time >= nextTimeToFire)
        {
                 StartCoroutine(Shoot());
-       }
+
+            if(isGun)
+            currentAmmo--;
+        }
     }
     #region Shoot
     IEnumerator Shoot() {
@@ -71,8 +75,6 @@ public class GunScr : MonoBehaviour
         nextTimeToFire = Time.time + fireRate;
         yield return new WaitForSeconds(useDelay);
 
-
-        currentAmmo--;
         gunsShootAnim.SetBool("isShoot", true);
 
         if (muzzelFlash != null)

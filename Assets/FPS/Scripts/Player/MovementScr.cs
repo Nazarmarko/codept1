@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Utilites;
 
-public class MovementScr : MonoBehaviour
+public class MovementScr : Singleton<MovementScr>
 {
     #region Values
     public float gravity = -9.81f;
@@ -27,10 +28,8 @@ public class MovementScr : MonoBehaviour
     public int Health;
     [Range(0f, 30f)]
     public float buffsTime;
-    [Range(0, 30)]
-    public float fuelCount;
     #endregion
-    private int currentHealth;
+    public int currentHealth;
 
     bool isGrounded, isDoubleJump = false, isResist = false;
 
@@ -116,11 +115,9 @@ public class MovementScr : MonoBehaviour
         #endregion
 
         #region SpeedUpInput
-        if (Input.GetKey(shiftKey) && currentSpeed <= 40)
-        {
-            Debug.Log("L");
-            
-            SpeedUp(currentSpeed += 10);
+        if (Input.GetKey(shiftKey) && currentSpeed <= 20)
+        {         
+            SpeedUp(currentSpeed += 2);
         }else if (!Input.GetKey(shiftKey))
         {
             SpeedUp(speedForce);
@@ -153,7 +150,6 @@ public class MovementScr : MonoBehaviour
     }
     void SpeedUp(float speed)
     {
-       // Debug.Log(speed);
         currentSpeed = speed;
     }
     #endregion

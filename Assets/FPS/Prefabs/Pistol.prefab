@@ -9896,16 +9896,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bfe82b34c87d734fbea42eec4ccf715, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tmpText: {fileID: 0}
+  fpsCamera: {fileID: 0}
   muzzelFlash: {fileID: 3758825282011817617}
   gunsShootAnim: {fileID: 3758825281619427337}
   impactEffect: {fileID: 102984, guid: 63782bd2b5a23754181adaf65653088a, type: 3}
-  damage: 10
   impactForce: 150
   range: 100
   fireRate: 0.25
   useDelay: 0
+  damage: 10
   currentAmmo: 50
-  isGun: 0
+  limitAmmo: 0
+  isGun: 1
 --- !u!65 &3758825281627336649
 BoxCollider:
   m_ObjectHideFlags: 0

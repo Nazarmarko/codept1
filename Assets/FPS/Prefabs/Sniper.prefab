@@ -14372,11 +14372,11 @@ MonoBehaviour:
   muzzelFlash: {fileID: 95301625714225683}
   gunsShootAnim: {fileID: 95301624321592310}
   impactEffect: {fileID: 195742, guid: c83fb3ef04bb383408bb2064b89690b2, type: 3}
-  damage: 50
   impactForce: 200
   range: 100
   fireRate: 1
   useDelay: 0
+  damage: 50
   currentAmmo: 5
   limitAmmo: 15
   isGun: 1
