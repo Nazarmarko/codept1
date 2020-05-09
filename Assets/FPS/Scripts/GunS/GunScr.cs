@@ -13,7 +13,6 @@ public class GunScr : MonoBehaviour
    public Camera fpsCamera;
 
     public ParticleSystem muzzelFlash;
-    public Animator gunsShootAnim;
 
     public GameObject impactEffect;
   
@@ -71,11 +70,8 @@ public class GunScr : MonoBehaviour
     }
     #region Shoot
     IEnumerator Shoot() {
-        gunsShootAnim.SetBool("isShoot", true);
         nextTimeToFire = Time.time + fireRate;
         yield return new WaitForSeconds(useDelay);
-
-        gunsShootAnim.SetBool("isShoot", true);
 
         if (muzzelFlash != null)
         {
@@ -100,7 +96,6 @@ RaycastHit hit;
 Destroy(impact, .5f);
         } 
         yield return new WaitForSeconds(fireRate - useDelay - 0.1f);
-        gunsShootAnim.SetBool("isShoot", false);
 
     }
     #endregion

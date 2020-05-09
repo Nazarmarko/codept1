@@ -16,11 +16,17 @@ public class GunManager : Singleton<GunManager>
 
     #region Transforms
     public Transform cameraTransform;
-    public Transform hand;
-    public Transform GunsPosition;
+   private Transform hand;
     public Transform dropPoint;
     #endregion
     public bool isSwitch = true;
+
+
+   new void Awake()
+    {     
+        hand = GetComponent<Transform>();
+    }
+
     #region InputsGetter
     void Update()
     {
@@ -67,22 +73,28 @@ public class GunManager : Singleton<GunManager>
             {
                 weaponsInGame.Add(hit.collider.gameObject);
 
-                hit.collider.gameObject.GetComponent<Rigidbody>().isKinematic = true;
-
-                hit.collider.gameObject.SetActive(false);
-
-                hit.transform.parent = hand;
-                hit.transform.position = GunsPosition.position;
-                hit.transform.rotation = GunsPosition.rotation;
-                SelectWeapon(0);
+                PickUpper(hit.collider.gameObject);
             }
         }
+    }
+    void PickUpper(GameObject item)
+    {
+        item.GetComponent<Rigidbody>().isKinematic = true;
+
+        item.SetActive(false);
+
+        item.transform.SetParent(hand.transform);
+
+        item.transform.localPosition = hand.localPosition;
+
+        item.transform.localRotation = hand.localRotation;
     }
     #endregion
     #region Throw
     void ThrowWeapon()
     {
         currentWeapon.transform.parent = null;
+      
 
         currentWeapon.GetComponent<Rigidbody>().isKinematic = false;
 
