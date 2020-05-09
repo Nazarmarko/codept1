@@ -35,7 +35,7 @@ public class MovementScr : Singleton<MovementScr>
 
     byte buffNumber;
 
-    public GameObject image;
+    public GameObject deathImage;
     #endregion
     void Start()
     {
@@ -88,11 +88,11 @@ public class MovementScr : Singleton<MovementScr>
         #region HealthTracker
         if (currentHealth <= 40)
         {
-            image.SetActive(true);
+            deathImage.SetActive(true);
         }
         else
         {
-            image.SetActive(false);
+            deathImage.SetActive(false);
         }
         #endregion
 
@@ -161,7 +161,7 @@ public class MovementScr : Singleton<MovementScr>
             return;
 
         currentHealth -= Damage;
-        image.SetActive(true);
+        deathImage.SetActive(true);
         HealthManager.instance.SetValue(currentHealth);
         if(currentHealth < 80)
         {
